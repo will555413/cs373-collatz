@@ -71,6 +71,6 @@ RunCollatz.tmp: RunCollatz.in RunCollatz.out RunCollatz.py
 	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz.tmp: TestCollatz.py
-	coverage3 run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
-	coverage3 report -m                      >> TestCollatz.tmp
+	python3-coverage run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
+	python3-coverage report -m                      >> TestCollatz.tmp
 	cat TestCollatz.tmp
