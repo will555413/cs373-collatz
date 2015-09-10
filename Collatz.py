@@ -59,15 +59,27 @@ def collatz_eval (i, j) :
 def cycle_length (num):
     """
     returns the cycle length of num
+    if cache have stored a valid value, return it
+    if not, get the next number in sequence and call itself recursively
+    at each recursion, if num is a storable number (depends on size of cache), stored the value of return by the recursive call
     """
-    if num == 1:
-        return 1
+    global cache
+    if num < 999999 and num > -1 and cache[num] > 0:
+        return cache[num]
     elif num % 2 == 1:
-        num += (num // 2) + 1
-        return 2 + cycle_length(num)
+        next_num = num + (num // 2) + 1
+        if num < 999999 and num > -1:
+            cache[num] = 2 + cycle_length(next_num)
+            return cache[num]
+        else:
+            return 2 + cycle_length(next_num)
     else:
-        num = num // 2
-        return 1 + cycle_length(num)
+        next_num = num // 2
+        if num < 999999 and num > -1:
+            cache[num] = 1 + cycle_length(next_num)
+            return cache[num]
+        else:
+            return 1 + cycle_length(next_num)
 
 # -------------
 # collatz_print
