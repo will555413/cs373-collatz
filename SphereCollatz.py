@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 
-# ---------------------------
-# projects/collatz/Collatz.py
+# ------------------------------
+# projects/collatz/RunCollatz.py
 # Copyright (C) 2015
 # Glenn P. Downing
-# ---------------------------
+# ------------------------------
+
+# -------
+# imports
+# -------
+
+import sys
 
 # ------------
 # collatz_read
@@ -33,11 +39,13 @@ def collatz_eval (i, j) :
     assert i>0 and i<=1000000
     assert j>0 and j<=1000000
 
-    b = j if j>i else i
+    b = j if j > i  else i
     a = i if b == j else j
     a = b//2 if b//2>a else a
-
+    
+    
     max_count = -1
+    # Since python range() is exclusive on the end, I extended the range by 1 to make it arbitrarily inclusive
     for num in range(a, b+1):
         count = 1
         while(num > 1):
@@ -48,8 +56,7 @@ def collatz_eval (i, j) :
             count += 1
         if count > max_count:
             max_count = count
-
-    assert max_count > 0
+    assert max_count >= 1
     return max_count
 
 # -------------
@@ -79,3 +86,10 @@ def collatz_solve (r, w) :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
         collatz_print(w, i, j, v)
+
+# ----
+# main
+# ----
+
+if __name__ == "__main__" :
+    collatz_solve(sys.stdin, sys.stdout)
