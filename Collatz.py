@@ -40,12 +40,13 @@ def collatz_eval (i, j) :
     max_count = -1
     for num in range(a, b+1):
         count = 1
-        while(num > 1):
+        while num > 1:
             if num % 2 == 1:
-                num = num * 3 + 1
+                num += (num // 2) + 1
+                count += 2
             else:
                 num = num // 2
-            count += 1
+                count += 1
         if count > max_count:
             max_count = count
 
