@@ -7,6 +7,12 @@
 # ---------------------------
 
 # ------------
+# Global Cache
+# ------------
+
+cache = []
+
+# ------------
 # collatz_read
 # ------------
 
@@ -39,19 +45,29 @@ def collatz_eval (i, j) :
 
     max_count = -1
     for num in range(a, b+1):
-        count = 1
-        while num > 1:
-            if num % 2 == 1:
-                num += (num // 2) + 1
-                count += 2
-            else:
-                num = num // 2
-                count += 1
+        count = cycle_length(num)
         if count > max_count:
             max_count = count
 
     assert max_count > 0
     return max_count
+
+# ------------
+# cycle_length
+# ------------
+
+def cycle_length (num):
+    """
+    returns the cycle length of num
+    """
+    if num == 1:
+        return 1
+    elif num % 2 == 1:
+        num += (num // 2) + 1
+        return 2 + cycle_length(num)
+    else:
+        num = num // 2
+        return 1 + cycle_length(num)
 
 # -------------
 # collatz_print
@@ -76,6 +92,14 @@ def collatz_solve (r, w) :
     r a reader
     w a writer
     """
+    global cache
+    # manually added cycle length of 0, which is indexed at 0, as -1 (garbage value)
+    cache.append(-1)
+    # manually added cycle length of 1, which is indexed at 1, as 1
+    cache.append(1)
+    # add cycle length placeholders into the cache, starting from 2 since 0 and 1 have been added
+    for idx in range(2, 1000000):
+        cache.append(0)
     for s in r :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
