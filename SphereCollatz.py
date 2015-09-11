@@ -17,6 +17,13 @@ import sys
 # ------------
 
 cache = []
+# manually added cycle length of 0, which is indexed at 0, as -1 (garbage value)
+cache.append(-1)
+# manually added cycle length of 1, which is indexed at 1, as 1
+cache.append(1)
+# add cycle length placeholders into the cache, starting from 2 since 0 and 1 have been added
+for idx in range(2, 1000000):
+    cache.append(0)
 
 # ------------
 # collatz_read
@@ -110,14 +117,6 @@ def collatz_solve (r, w) :
     r a reader
     w a writer
     """
-    global cache
-    # manually added cycle length of 0, which is indexed at 0, as -1 (garbage value)
-    cache.append(-1)
-    # manually added cycle length of 1, which is indexed at 1, as 1
-    cache.append(1)
-    # add cycle length placeholders into the cache, starting from 2 since 0 and 1 have been added
-    for idx in range(2, 1000000):
-        cache.append(0)
     for s in r :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
