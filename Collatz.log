@@ -1,3 +1,39 @@
+commit d1118175124540fc7eedf0c8562473374daf03f2
+Author: William <will555413>
+Date:   Thu Sep 10 22:10:51 2015 -0500
+
+    change make TestCollatz.tmp to use coverage instead of python3-coverage
+
+commit 49e71a5b5e073db81d886b4adaeb5bfe8c3eabde
+Author: William <will555413>
+Date:   Thu Sep 10 22:08:53 2015 -0500
+
+    add script ot check travis python coverage installation
+
+commit 2f7c9259923a0920e8fa4ecc3bde0a7f7810132b
+Author: William <will555413>
+Date:   Thu Sep 10 22:07:17 2015 -0500
+
+    add script ot check travis python coverage installation
+
+commit 45d4ca8b1b9652363567e5a1a7079a14ca607ae6
+Author: William <will555413>
+Date:   Thu Sep 10 21:22:34 2015 -0500
+
+    remove public test repo
+
+commit 0617565f83fb2688cc08ce9d37cd1e9ce531e06c
+Author: William <will555413>
+Date:   Thu Sep 10 21:10:59 2015 -0500
+
+    tests folder added
+
+commit 71b52bae68dba0aca0fa806b8304a0c261dd9b6e
+Author: William <will555413>
+Date:   Thu Sep 10 20:48:22 2015 -0500
+
+    Collatz.html and log added
+
 commit d75d580137815966c2e9742bbae04fd03a71cfba
 Author: William <will555413>
 Date:   Thu Sep 10 20:29:27 2015 -0500
