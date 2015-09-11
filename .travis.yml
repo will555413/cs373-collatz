@@ -28,6 +28,5 @@ script:
     - make Collatz.log
     - ls -al
     - make test
-    - coverage --version
     - ls -al
     - make check
