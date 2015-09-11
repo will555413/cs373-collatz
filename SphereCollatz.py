@@ -70,18 +70,18 @@ def cycle_length (num):
     at each recursion, if num is a storable number (depends on size of cache), stored the value of return by the recursive call
     """
     global cache
-    if num < 999999 and num > -1 and cache[num] > 0:
+    if num < len(cache) and num > -1 and cache[num] > 0:
         return cache[num]
     elif num % 2 == 1:
         next_num = num + (num // 2) + 1
-        if num < 999999 and num > -1:
+        if num < len(cache) and num > -1:
             cache[num] = 2 + cycle_length(next_num)
             return cache[num]
         else:
             return 2 + cycle_length(next_num)
     else:
         next_num = num // 2
-        if num < 999999 and num > -1:
+        if num < len(cache) and num > -1:
             cache[num] = 1 + cycle_length(next_num)
             return cache[num]
         else:

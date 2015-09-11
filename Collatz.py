@@ -9,8 +9,18 @@
 # ------------
 # Global Cache
 # ------------
-
+"""
+declare and initialize a global cache that would stored the cycle length of the corresponding indexed
+for example, value stored at index 10 would 7 since cycle_length of 10 is 7
+"""
 cache = []
+# manually added cycle length of 0, which is indexed at 0, as -1 (garbage value)
+cache.append(-1)
+# manually added cycle length of 1, which is indexed at 1, as 1
+cache.append(1)
+# add cycle length placeholders into the cache, starting from 2 since 0 and 1 have been added
+for idx in range(2, 1000000):
+    cache.append(0)
 
 # ------------
 # collatz_read
@@ -64,18 +74,18 @@ def cycle_length (num):
     at each recursion, if num is a storable number (depends on size of cache), stored the value of return by the recursive call
     """
     global cache
-    if num < 999999 and num > -1 and cache[num] > 0:
+    if num < len(cache) and num > -1 and cache[num] > 0:
         return cache[num]
     elif num % 2 == 1:
         next_num = num + (num // 2) + 1
-        if num < 999999 and num > -1:
+        if num < len(cache) and num > -1:
             cache[num] = 2 + cycle_length(next_num)
             return cache[num]
         else:
             return 2 + cycle_length(next_num)
     else:
         next_num = num // 2
-        if num < 999999 and num > -1:
+        if num < len(cache) and num > -1:
             cache[num] = 1 + cycle_length(next_num)
             return cache[num]
         else:
@@ -104,14 +114,6 @@ def collatz_solve (r, w) :
     r a reader
     w a writer
     """
-    global cache
-    # manually added cycle length of 0, which is indexed at 0, as -1 (garbage value)
-    cache.append(-1)
-    # manually added cycle length of 1, which is indexed at 1, as 1
-    cache.append(1)
-    # add cycle length placeholders into the cache, starting from 2 since 0 and 1 have been added
-    for idx in range(2, 1000000):
-        cache.append(0)
     for s in r :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
