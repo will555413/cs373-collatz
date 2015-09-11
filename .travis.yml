@@ -28,6 +28,6 @@ script:
     - make Collatz.log
     - ls -al
     - make test
-    - python3-coverage --version
+    - coverage --version
     - ls -al
     - make check
