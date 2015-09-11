@@ -1,0 +1,95 @@
+commit d75d580137815966c2e9742bbae04fd03a71cfba
+Author: William <will555413>
+Date:   Thu Sep 10 20:29:27 2015 -0500
+
+    clean build for travis ci
+
+commit 4b1b5c7ad1b86888b1ac8db4777cddd20dad51ad
+Author: William <will555413>
+Date:   Thu Sep 10 20:09:12 2015 -0500
+
+    makefile modification
+
+commit ecb3542a5db17e32f54008f190fff6fe3c246f3b
+Author: William <will555413>
+Date:   Thu Sep 10 19:59:19 2015 -0500
+
+    cache solution accepted by sphere
+
+commit 321db2bf396b6af235bec06afa57e76f76ba3f42
+Author: William <will555413>
+Date:   Thu Sep 10 19:53:08 2015 -0500
+
+    Unit tests completed
+
+commit 3e1b36b4fecc494dd99bb888af0ca3d4527080ec
+Author: William <will555413>
+Date:   Thu Sep 10 19:40:07 2015 -0500
+
+    allow the cache size to be modifiable
+
+commit 8df12e063c2848d905e927fdc3f7882ee0df5f84
+Author: William <will555413>
+Date:   Thu Sep 10 17:43:48 2015 -0500
+
+    SphereCollatz.py updated and accepted
+
+commit 9a40e9a4450e70d67eef2de8bea70a4cae10448e
+Author: William <will555413>
+Date:   Thu Sep 10 17:40:51 2015 -0500
+
+    cache completed, output matches previous solution
+
+commit 8a0a679e2de0d79a8203355f1dd931195ca4b663
+Author: William <will555413>
+Date:   Thu Sep 10 17:18:07 2015 -0500
+
+    modified collatz calculation to incorporate recursion
+
+commit 1091dd50eb9eb7ad5facf132dfc4cfb1e41fe607
+Author: William <will555413>
+Date:   Thu Sep 10 16:18:58 2015 -0500
+
+    range deduction and step skipping complete
+
+commit ca56ff39abd69b47650eff727e9421a88c17ec94
+Author: William <will555413>
+Date:   Thu Sep 10 15:27:23 2015 -0500
+
+    simple solution successful
+
+commit d3b0f892219b1c7b83b100625e627ef39c69221d
+Author: William <will555413>
+Date:   Thu Sep 10 13:40:24 2015 -0500
+
+    simple solution
+
+commit 5819c47486316a34185e06a412159c8f534365f0
+Author: William <will555413>
+Date:   Thu Sep 10 13:35:46 2015 -0500
+
+    simple solution
+
+commit 38fc85a62786479a8eb3a6a4437b1d3bf3e4204f
+Author: William <will555413>
+Date:   Mon Sep 7 17:23:26 2015 -0500
+
+    public test repo added
+
+commit 3328895bcfc216966f72d63c20b06d98c1f1cb13
+Author: William <will555413>
+Date:   Mon Sep 7 17:14:35 2015 -0500
+
+    expected successes/failures checked
+
+commit 75384dfa970cee372d42cb18fa4d485abdc87624
+Author: William <will555413>
+Date:   Mon Sep 7 16:29:47 2015 -0500
+
+    initial commit fixed - added .gitignore and .travis.yml
+
+commit 601201056189532911a9734349a7046ff833e1ec
+Author: William <will555413>
+Date:   Tue Sep 1 15:03:54 2015 -0500
+
+    initial setup
