@@ -1,0 +1,23 @@
+Name: CHEN, WEI CHIEH
+Github ID: will555413
+EID: wc6892
+10/10       Quality of Code
+9/10        Quality of Optimization
+20.0/20     Quality of the Unit Tests
+20/20       Quality of the Acceptance Tests
+10/10       Quality of Documentation
+1/10        Bonus Points. Bonus Points do not increase your max score
+57.0/70.0   Total
+
+Days Late: 1
+20% off for each day late
+
+Code Comments: 
+Instead of using temp // 2 you could have used the bit shift temp >> 1. Better Optimization.
+Unit Test Comments: 
+nan
+Acceptance Test Comments: 
+nan
+
+
+
